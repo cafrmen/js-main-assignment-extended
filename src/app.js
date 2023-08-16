@@ -43,8 +43,6 @@ function defaultValues() {
     cpuWins = 0;
     round = 0;
     roundNum.innerHTML = '';
-    playerNum.innerHTML = '';
-    cpuNum.innerHTML = '';
 }
 
 function playRound(playerChoice, cpuChoice) {
@@ -86,15 +84,13 @@ function checkFinalScore() {
         body.setAttribute('style', 'background-color: #D2EBCD');
         footer.innerHTML = `You won the battle!
                             ${randomWinFrases[Math.floor(Math.random() * 5)]} ...
-                            Final Score: You ${playerWins}, CPU ${cpuWins}.
-                            This game was coded by humans and stolen by the AI Interstellar Congress.`;
+                            This game was coded by two humans and stolen by the AI Interstellar Congress.`;
         defaultValues();
     } else if (cpuWins === 5) {
         body.setAttribute('style', 'background-color: #FF7F5B');
         footer.innerHTML = `You lost the battle!
                             ${randomLooseFrases[Math.floor(Math.random() * 5)]} ...
-                            Final Score: You ${playerWins}, CPU ${cpuWins}.
-                            This game was coded by humans and stolen by the AI Interstellar Congress.`;
+                            This game was coded by two humans and stolen by the AI Interstellar Congress.`;
         defaultValues();
     }
 }
